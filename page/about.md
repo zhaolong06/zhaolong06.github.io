@@ -28,9 +28,9 @@ type: page
 ## 联系我
 
 * GitHub：[zhaolong06](https://github.com/zhaolong06)
-* email：zhaolong0206@gmail.com
+* Email：zhaolong0206@gmail.com
 
 
-## Comments
+## 评论
 
 {% include comments.html %}
