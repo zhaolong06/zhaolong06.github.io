@@ -4,6 +4,7 @@ title:  "谈谈HTTP缓存"
 date:   2017-11-26 08:30:13
 categories: Http
 tags: Http, Cache
+analytics: true
 ---
 
 * content

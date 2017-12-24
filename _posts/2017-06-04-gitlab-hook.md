@@ -4,6 +4,7 @@ title:  "如何在gitlab上设置钩子"
 date:   2017-06-04 20:29:54
 categories: gitlab
 tags: gitlab
+analytics: true
 ---
 
 * content
