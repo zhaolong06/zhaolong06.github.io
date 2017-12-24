@@ -38,6 +38,7 @@ disqus_shortname: blog-cturjncndo
 analytics:
   provider: custom
 
+baidu_tongji_id: feca793ecc711aa6bd28c3eef1880627
 google_analytics_id: UA-111594972-1
 
 # Build settings
