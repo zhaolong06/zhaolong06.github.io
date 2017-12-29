@@ -19,7 +19,7 @@ analytics: true
 再次使用该资源的时候，会向服务器发起请求验证一遍，如果缓存资源有效，则会返回304状态码。最坏的情况下，则是该资源过期了，还得重新发起一次请求去获取。另一种则是浏览
 器连问都不问服务器，直接就从本地硬盘读取，此时可以看到浏览器给出的响应是200(from disk cache)。
 
-![status](/img/http-cache/status.png)
+![status](/images/posts/http-cache/status.png)
 
 ### ETag
 
@@ -29,7 +29,7 @@ analytics: true
 这时ETag就是用来解决这个问题的，ETag可以看做是这个文件的hash值，只要文件内容没有改变，ETag值则不会变。客户端完全不需要了解ETag是怎么生成的，只需要在下一次请求的
 时候将ETag带上即可（浏览器发起请求时，if-None-Match中的值就是该ETag值），若该ETag与服务器匹配，则会返回304，告诉浏览器可以使用该缓存，从而跳过再次下载过程。
 
-![etag](/img/http-cache/etag.png)
+![etag](/images/posts/http-cache/etag.png)
 
 
 ### Cache-Control
@@ -58,7 +58,7 @@ Cache-Control指令控制谁在什么条件下可以缓存响应以及可以缓�
 
 ### 定义最佳Cache-Control策略
 
-![cache-control](/img/http-cache/cache-control.png)
+![cache-control](/images/posts/http-cache/cache-control.png)
 
 如上图所示，如果资源不需要缓存，我们设置Cache-Control的值为no-store；如果资源需要缓存且每次都得向服务器验证，则为no-cache；如果中间设备可以缓存，设置为public，中间设备不
 可缓存，设置为private；如果缓存有时间限制，我们设置max-age的值。private与public的值可以与max-age同时使用，中间用分号隔开。

@@ -1,66 +1,59 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Basic
+title: 郑兆龙
+subtitle: 个人博客
+description: 欢迎来到我的个人博客~
+# 头像里面的标题
+avatarTitle: zzl
+# 头像里面的描述
+avatarDesc: 前端
+url: "https://zhaolong06.github.io"
 
-# Site settings
-title: 郑兆龙个人博客
-brief-intro: 前端开发工程师
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://zhaolong06.github.io" # the base hostname & protocol for your site
+# Comment
+comment:
+    disqus: blog-cturjncndo
+    # uyan: 2143225  # 有言id,登录有言官网申请
 
-permalink: /:year/:month/:day/:title/
+# Social
+social:
+    weibo: 2138537183 
+    github: zhaolong06
+    # twitter: 
+    mail: zhaolong0206@gmail.com
 
-# other links
-github_username:  zhaolong06
-email: zhaolong0206@gmail.com
-weibo_username: 
-zhihu_username: 
-linkedIn_username:
-dribbble_username:
+# 百度统计 
+# 使用博客模板请去掉或者更换 id 
+baidu:
+    id: feca793ecc711aa6bd28c3eef1880627  
 
-description_footer: 本站记录我对技术得所思所想所得！
+# Google Analytics
+# 使用博客模板请去掉或者更换 id
+ga:
+    id: UA-111594972-1   
+    host: auto
 
-# comments
-# two ways to comment, only choose one, and use your own short name
-# 两种评论插件，选一个就好了，使用自己的 short_name
-#duoshuo_shortname: #hygblog
-disqus_shortname: blog-cturjncndo
+permalink: /:year/:month/:title/
+# Format
+highlighter: rouge
 
-# statistic analysis 统计代码
-# 百度统计 id，将统计代码替换为自己的百度统计id，即
-# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
-# xxxxx字符串
-#baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
-#google_analytics_id: UA-72449510-4 # google 分析追踪id
-analytics:
-  provider: custom
+textColor: #FF0000
 
-baidu_tongji_id: feca793ecc711aa6bd28c3eef1880627
-google_analytics_id: UA-111594972-1
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: clear
 
-# Build settings
-markdown: kramdown
+# The blog button should not be removed.
+blog_button:
+    title: 博客主页
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+# Navigation buttons in the front page.s
+nav:
+    - {title: 所有文章, description: archive, url: '/archive'}   
+    - {title: 标签, description: tags, url: '/tags'}      
+    - {title: 关于我, description: about, url: '/about'}      
+    
 
-# port
-# port: 1234
+# Pagination
+gems: [jekyll-paginate,jekyll-sitemap]
+paginate: 20
+paginate_path: "page/:num/"
 
-# url
-category_dir: category/
-tag_dir: tag/
 
-# excerpt
-excerpt_separator: "\n\n\n\n"
-
-# paginate
-plugins_dir:
-  - jekyll-paginate
-paginate: 6
-
-gems: [jekyll-paginate]
