@@ -1,6 +1,6 @@
 ---
 layout: post
-title: python入门：数字与字符串
+title: python学习笔记：数字与字符串
 date: 2018-01-07
 categories: python
 tags: python
