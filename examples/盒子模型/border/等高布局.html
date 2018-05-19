@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.box {
+			border-left: 150px solid #333;
+			background: #f3f3f3;
+		}
+		.box::after {
+			clear: both;
+			display: block;
+			content: '';
+		}
+		.nav {
+			float: left;
+			width: 150px;
+			margin-left: -150px;
+		}
+		li {
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="nav">
+			<ul>
+				<li>会员中心</li>
+				<li>店铺设置</li>
+			</ul>
+		</div>
+		<section>
+			content
+		</section>
+	</div>
+</body>
+</html>

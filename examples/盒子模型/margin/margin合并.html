@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.father {
+			background: url('https://img.yzcdn.cn/public_files/2018/03/14/4c1a01f0867ec20b8c55df5061d93f2d.png');
+			height: 100px;
+		}
+		.father h1 {
+			margin-top: 26px;
+		}
+	</style>
+</head>
+<body>
+	<h3>概念：块级元素的上外边距与下外边距有时会合并为单个外边距，这种现象称为“margin合并”。</h3>
+	<ul>
+		<li>
+			<p>相邻兄弟元素margin合并</p>
+		</li>
+		<li>
+			<p>父级和第一个/最后一个子元素合并</p>
+			<div class="father">
+				<h1>次卡次卡</h1>
+			</div>
+			<div>
+				<div>解决方案：margin-top合并</div>
+				<ul>
+					<li>父元素设置为<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context">块状格式化上下文元素</a></li>
+					<li>父元素设置border-top值</li>
+					<li>父元素设置padding-top值</li>
+					<li>父元素和第一个子元素之间添加内联元素进行分隔</li>
+				</ul>
+				<div>解决方案：margin-bottom合并</div>
+				<ul>
+					<li>父元素设置为块状格式化上下文元素</li>
+					<li>父元素设置border-bottom值</li>
+					<li>父元素设置padding-bottom值</li>
+					<li>父元素和最后一个子元素之间添加内联元素进行分隔</li>
+					<li>父元素设置 height、min-height 或 max-height。</li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<p>空块级元素的margin合并</p>
+			<div style="overflow: hidden;">
+				<div style="margin: 16px 0"></div>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>

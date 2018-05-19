@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.dot {
+			display: inline-block;
+			overflow: hidden;
+			height: 1em;
+			line-height: 1;
+			vertical-align: -.25em;
+		}
+		.dot::before {
+			display: block;
+			content: '...\A..\A.';
+			white-space: pre;
+			animation: dot 3s infinite step-start both;
+		}
+		@keyframes dot {
+			33% {
+				transform: translateY(-2em);
+			}
+			66% {
+				transform: translateY(-1em);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div>页面加载中<span class="dot">...</span></div>
+	<span></span>
+</body>
+</html>

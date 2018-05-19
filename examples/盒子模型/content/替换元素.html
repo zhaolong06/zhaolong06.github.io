@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		em {
+			color: red;
+		}
+		.box::before {
+			content: url(https://img.yzcdn.cn/public_files/2018/03/17/c6c59d41a118757ae6a5750eb632ee76.jpg);
+			display: block;
+			width: 200px;
+			height: 200px;
+		}
+		.input::before {
+			content: 'input';
+			display: block;
+			width: 200px;
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<p>根据“外在盒子”是内联还是块级，我们把元素分为内联元素和块级元素，而根据内容是否可替换，我们把元素分为<em>可替换元素</em>和<em>非替换元素</em></p>
+		</li>
+		<li>
+			<p>&lt;img&gt;，&lt;video&gt;，&lt;canvas&gt;，&lt;input&gt;，&lt;textarea&gt;，&lt;iframe&gt;都是替换元素</p>
+		</li>
+		<li>
+			<p>替换元素外观不受页面css的影响</p>
+			<p>有自己的尺寸，一般为300 * 150</p>
+			<p>在很多css属性上有自己的一套表现规则，例如vertical-align默认就是元素下边缘对齐，而不是基线对齐</p>
+		</li>
+		<li><p>替换元素尺寸计算规则：css尺寸 &gt; html尺寸 &gt; 固有尺寸</p></li>
+		<li><p>内联替换元素和块级替换元素规则一致，即display: block; 其宽度也不会100%</p></li>
+		<li>
+			<p>替换元素固有尺寸无法更改，width和height改变的是content-box的宽高，而默认替换元素的object-fit是fill，也就是会填充content-box，因此看上去像是改变了固有尺寸。<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit">object-fit</a></p>
+			<div class="box"></div>
+		</li>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<li>
+			<p>替换元素before和after伪元素无效</p>
+			<input class="input" type="text" name="">
+		</li>
+	</ul>
+</body>
+</html>

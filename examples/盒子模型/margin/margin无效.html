@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.box {
+			position: relative;
+			border: 1px solid #ccc;
+			width: 200px;
+			height: 200px;
+		}
+		.b1 {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin-right: 300px;
+			margin-bottom: 300px;
+		}
+		.b2 {
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin-right: 300px;
+			margin-bottom: 300px;
+		}
+		.b3 {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			margin-top: -100px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<p>display 计算值 inline 的非替换元素的垂直 margin 是无效的，虽然规范提到有 渲染，但浏览器表现却未寻得一点踪迹，这和 padding 是有明显区别的。对于内联替换元素， 垂直 margin 有效，并且没有 margin 合并的问题，所以图片永远不会发生 margin 合并</p>
+		</li>
+		<li>
+			<p>表格中的&lt;tr&gt;和&lt;td&gt;元素或者设置 display 计算值是 table-cell 或 table-row 的元素的 margin 都是无效的。但是，如果计算值是 table-caption、table 或者 inline-table 则没有此问题，可以通过 margin 控制外间距，甚至::first-letter 伪元素也可以解析 margin。</p>
+		</li>
+		<li>
+			<p>margin合并的时候，更改margin值可能无效。因为垂直方向上会发生margin合并</p>
+		</li>
+		<li>
+			<p>绝对定位元素非定位方位的margin值“无效”</p>
+			<div class="box">
+				<div class="b1"></div>
+			</div>
+		</li>
+		<li>
+			<p>定高容器的子元素的margin-bottom或者宽度定死的子元素的margin-right的定位“失效”</p>
+			<div class="box">
+				<div class="b2"></div>
+			</div>
+		</li>
+		<li>
+			<p>内联特性导致的margin值无效</p>
+			<div class="box">
+				<span class="b3"></span>
+			</div>
+		</li>
+	</ul>
+	
+</body>
+</html>

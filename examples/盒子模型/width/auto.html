@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.fill-available {
+			width: 100%;
+			margin: 20px;
+			padding: 20px;
+			background: red;
+		}
+		.father {
+			  width: 150px;
+			  padding: 5px;
+			  background-color: #cd0000;
+			  margin: 10px 0;
+		}
+		.child {
+		  display: inline-block;
+		  background-color: #f0f3f9;
+		  white-space: nowrap;
+		}
+		.min-content {
+			width: 50px;
+		}
+		.img-wrap {
+			position: relative;
+			width: 500px;
+			height: 500px;
+			margin: 10px 0;
+		}
+		.img {
+				position: absolute;
+				left: 10px;
+				right: 10px;
+		}
+		.text-center {
+			text-align: center;
+			width: 200px;
+			box-sizing: border-box;
+			padding: 20px;
+			background: red;
+		}
+		.text-left {
+			display: inline-block;
+			text-align: left;
+			color: #fff;
+		}
+		.bulge-box {
+			margin-top: 20px;
+			width: 0px;
+		}
+		.bulge {
+			display: inline;
+			color: #fff;
+			outline: 2px solid red;
+		}
+		.scroll-wrap {
+			position: relative;
+			width: 352px;
+			height: 236px;
+			overflow: hidden;
+		}
+		.scroll {
+			position: absolute;
+			white-space: nowrap;
+			transform: translate(-41px, 0px) translateZ(0px);
+		}
+		.scroll-wrap img {
+			width: 100%;
+		}
+		/*#test {
+			box-sizing: border-box;
+			padding: 50%;
+			background: red;
+		}
+		
+		.input {
+			display: block;
+		}
+		.link {
+			padding: 50px;
+			background: red;
+			color: #fff;
+		}
+		a + a:before {
+		    content: "";
+		    font-size: 0;
+		    padding: 10px 3px 1px;
+		    margin-left: 6px;
+		    border-left: 1px solid gray;
+		}*/
+	</style>
+</head>
+<body>
+	<!-- <div style="width: 100px">
+		<div id="test"></div>
+	</div>
+	<span>111</span>
+	<table>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="father">
+		<div class="child">恰似一江春水向东流，恰似一江春水向东流</div>
+	</div>
+	<div class="test">11</div>
+	<input type="text" name="" class="input">
+	<video></video>
+	<img alt="abc" class="img">
+	<div>div</div>
+	<a class="link">链接</a>
+	<div>div</div>
+	<div class="nav">
+		<a>首页</a>
+		<a>登录</a>
+		<a>注册</a>
+	</div> -->
+	<ul>
+		<li>
+			<p>
+				fill-available：充分利用可用空间，例如div、p这些元素的宽度是默认100%于父级容器的。那么这时候 width:100% 等于 width: auto吗？
+				<div class="fill-available"></div>
+			</p>
+		</li>
+		<li>
+			<p>
+				fit-content：收缩到合适，典型代表浮动、绝对定位（有例外，设置了对立属性:left、right,top，bottom时，宽度和高度由祖先元素position非static的元素决定，但是替换元素除外：img、video、canvas等）、inline-block、table。
+				<div class="img-wrap">
+					<img class="img" alt="hello" src="https://img.yzcdn.cn/public_files/2017/09/25/a52f375dd33cb789767d574ed345e297.png" />
+				</div>
+				<div class="text-center">
+					<div class="text-left">文字整体居中展示，多行则居左展示</div>
+				</div>
+			</p>
+		</li>
+		<li>
+			<p>
+				min-content：收缩到最小。在表格中最常见，当每一列空间都不够的时候，文字能断则断，中文随便断，英文单词不能断。
+				<table class="min-content" border="1px">
+					<tbody>
+						<tr>
+							<td>第一行全是中文</td>
+							<td>hello, this is column 2</td>
+							<td>hi，这是第三列</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="bulge-box">
+					<div class="bulge">你Hello好</div>
+				</div>
+			</p>
+		</li>
+		<li>
+			<p>
+				max-content：超出容器限制，内容很长的连续英文或数字，或者内联元素被设置为了white-space: nowrap。
+				<div class="father">
+					<div class="child">无视父级元素宽度，超出容器限制</div>
+				</div>
+				<div class="father">
+					<div>191910102030404040404040494849494949494949449</div>
+				</div>
+				<div class="scroll-wrap">
+					<div class="scroll">
+						<img src="https://img.yzcdn.cn/public_files/2018/03/17/dab0c3178c83af99a40323a95335a72c.jpg" />
+						<img src="https://img.yzcdn.cn/public_files/2018/03/17/dc980a2a1e866220b4ae1646d846779a.jpg" />
+						<img src="https://img.yzcdn.cn/public_files/2018/03/17/8b286b6e00d621a2c109c5e9eb808c8f.jpg" />
+					</div>
+				</div>
+			</p>
+		</li>
+	</ul>
+</body>
+</html>

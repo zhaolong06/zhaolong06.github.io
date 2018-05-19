@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.box {
+			width: 200px;
+		}
+		p {
+			margin: 0;
+		}
+		input[type="checkbox"] {
+    		position: absolute;
+    		clip: rect(0 0 0 0); /* 定义元素哪部分可见，只适用于position:absolute，已废弃 */
+		}
+		.text {
+		  	max-height: 0;
+		  	overflow: hidden;
+		  	transition: max-height .25s;
+		}
+		:checked ~ .text {
+		  	max-height: 666px;
+		}
+		.check-in, .check-out {
+		    color: #34538b;
+		    cursor: pointer;
+		}
+		.check-out {
+		    display: none;
+		}
+		:checked ~ .check-in {
+		    display: none;
+		}
+		:checked ~ .check-out {
+		    display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<input type="checkbox" name="" id="check">
+	  	<p>其他文字</p>
+	  	<p class="text">文字展开与收缩，文字展开与收缩文字展开与收缩文字展开与收缩文字展开与收缩，文字展开与收缩文字展开与收缩</p>
+	  	<label for="check" class="check-in">更多↓</label>
+	  	<label for="check" class="check-out">收起↑</label>
+	</div>
+
+</body>
+</html>

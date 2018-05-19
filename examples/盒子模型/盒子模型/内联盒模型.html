@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		.line-box {
+			width: 300px;
+			line-height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>
+				内容区域(content area)。内容区域指的是一种围绕文字看不见的盒子，其大小仅受字符本身特性控制，本质上是一个字符盒子(character box)；但是图片这样的替换元素，其显示内容不是文字，因此内容区域可以看成是元素自身。
+			</li>
+			<li>
+				内联盒子(inline box)。“内联盒子”不会让内容成块显示，而是排成一行，这里的内联盒子紫的是元素的“外在盒子”，用来决定元素是内联还是块级。该盒子又可以细分为“内联盒子”和“匿名内联盒子”，如：
+				<p>这里是“匿名内联盒子”。<em>由于外部有内联标签，此处是“内联盒子”</em></p>
+			</li>
+			<li>
+				行框盒子(line box)。每一行就是一个行框盒子，每个行框盒子都是由一个个内联盒子组成，注意：
+				<div class="line-box">line-height是作用在行框盒子上的，并最终决定高度，line-height是作用在行框盒子上的，并最终决定盒子高度</div>
+			</li>
+			<li>
+				包含盒子(containing box)。此盒子有一行一行的“行框盒子”组成（css规范中，并没有“包含盒子”的说法，更准确的称呼是“包含块”(containing block)。这里称为盒子，是为了与其他盒子名称统一，另外称为盒子更形象、更容易理解）
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

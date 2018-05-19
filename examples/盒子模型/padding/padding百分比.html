@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.box {
+			width: 140px;
+			margin: 20px;
+			margin-bottom: 180px;
+		}
+		.b1 {
+			padding: 50%;
+			background: red;
+		}
+
+		.b2 {
+			font-size: 0;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<p>padding不支持负值</p>
+		</li>
+		<li>
+			<p>padding支持百分比，其水平和垂直方向padding值都是基于width来计算</p>
+			<div class="box" style="">
+				<div class="b1"></div>
+			</div>
+		</li>
+		<li>
+			<p>padding区域是跟着行框盒子走的，另外内联元素的垂直 padding 会让“幽灵空白 节点”显现，也就是规范中的“strut”出现</p>
+			<div class="box">
+				<span class="b1">内有文字若干</span>
+			</div>
+
+			<div class="box">
+				<span class="b1 b2"></span>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>
