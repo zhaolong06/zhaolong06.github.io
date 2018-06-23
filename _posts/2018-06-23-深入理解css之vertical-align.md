@@ -70,7 +70,7 @@ baseline，baseline为vertical-align的默认值，其意思是指基线对齐�
 
 效果如下：
 
-![baseline2](/images/posts/css/vertical-align/baseline2.png){:width="100px"}
+![baseline2](/images/posts/css/vertical-align/baseline2.png){:width="200px"}
 
 
 top，对于内联元素，指的是元素的顶部和当前行框盒子的顶部对齐；对于table-cell元素，指的是元素的顶padding边缘和表格行的顶部对齐。例子如下：
@@ -144,7 +144,7 @@ text-bottom，指的是盒子的底部和父级内容区域的底部对齐。
 ```
 
 效果如下：
-![text-top](/images/posts/css/vertical-align/text-top.png){:width="100px"}
+![text-top](/images/posts/css/vertical-align/text-top.png){:width="300px"}
 
 所谓内容区域，可以看成是鼠标选中文字后高亮的背景色区域，上面的例子中，由于父元素设置的是20px，所以图片的vertical-align设置text-top的时候，就可以看成是跟子元素为20px元素的内容区域顶部对齐。
 
