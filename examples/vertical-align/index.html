@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>vertical-align</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .box {
+            width: 300px;
+            line-height: 100px;
+            border: 1px solid #ccc;
+            margin-top: 100px;
+            font-size: 20px;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .text {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+        }
+        .baseline {
+            line-height: normal;
+        }
+        .top {
+            line-height: normal;
+            vertical-align: top;
+        }
+        .bottom {
+            line-height: normal;
+            vertical-align: bottom;
+        }
+        .tr {
+            display: table-row;
+        }
+        .td {
+            display: table-cell;
+        }
+        .f12 {
+            font-size: 12px;
+        }
+        .f16 {
+            font-size: 16px;
+        }
+        .f20 {
+            font-size: 20px;
+        }
+        .text-top {
+            line-height: normal;
+            vertical-align: text-top;
+            width: 100px;
+        }
+        .num {
+            line-height: normal;
+            vertical-align: 20px;
+        }
+        .box1 {
+            margin-top: 100px;
+            line-height: 32px;
+        }
+        .box1 > span {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="baseline">文本</span>
+    </div>
+    <div class="box">
+        <span class="top">文本</span>
+    </div>
+    <div class="box">
+        <span class="bottom">文本</span>
+    </div>
+    <div class="box tr">
+        <span class="top td">文本</span>
+    </div>
+    <div class="box">
+        <span class="f12">12px</span>
+        <span class="f16">16px</span>
+        <span class="f20">20px</span>
+        <img class="text-top" src="./card.jpg"/>
+    </div>
+    <div class="box">
+        <span class="num">文本</span>
+    </div>
+    <div class="container">
+        <span class="text">文本</span>
+        <span class="text"></span>
+    </div>
+
+    <div class="box1">
+        <span>文本</span>
+    </div>
+</body>
+</html>
