@@ -24,7 +24,7 @@ vertical-align的属性值可以归为以下4类：
 
 #### 线类
 
-baseline，baseline为vertical-align的默认值，其意思是指基线对齐，所谓基线，指的是字母x的下边缘，具体可看前文[深入理解css之line-height](https://segmentfault.com/a/1190000014936270)有讲解到，不懂的小伙伴建议先看看这篇文章。我们来看个例子，代码如下：
+baseline，baseline为vertical-align的默认值，其意思是指基线对齐，所谓基线，指的是字母x的下边缘，具体可看前文[深入理解css之line-height](https://zhaolong06.github.io/2018/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3css%E4%B9%8Bline-height/)有讲解到，不懂的小伙伴建议先看看这篇文章。我们来看个例子，代码如下：
 
 ```css
 
@@ -48,7 +48,7 @@ baseline，baseline为vertical-align的默认值，其意思是指基线对齐�
 
 ![baseline](/images/posts/css/vertical-align/baseline.png){:width="100px"}
 
-由于baseline是默认值，所以可以不用写。.box的line-height为100px，这其实是给“strut”设置的（不懂strut概念的可以看看前面的文章[深入理解css盒子模型](https://segmentfault.com/a/1190000014692461)，简单点说就是每一个行框盒子都有一个看不见的节点，该节点继承了line-height），因此.text对齐于该节点的基线（可以想象成这个看不见的节点有一个字母x，而.text就是跟这个字母x的下边缘对齐）
+由于baseline是默认值，所以可以不用写。.box的line-height为100px，这其实是给“strut”设置的（不懂strut概念的可以看看前面的文章[深入理解css盒子模型](https://zhaolong06.github.io/2018/05/css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/)，简单点说就是每一个行框盒子都有一个看不见的节点，该节点继承了line-height），因此.text对齐于该节点的基线（可以想象成这个看不见的节点有一个字母x，而.text就是跟这个字母x的下边缘对齐）
 
 关于baseline，有一个需要注意的地方就是inline-block元素，如果一个inline-block元素，里面没有内联元素，或者overflow不是visible，则该元素的基线是其margin底边缘；否则其基线就是元素里面最后一行内联元素的基线。例子如下：
 
@@ -144,6 +144,7 @@ text-bottom，指的是盒子的底部和父级内容区域的底部对齐。
 ```
 
 效果如下：
+
 ![text-top](/images/posts/css/vertical-align/text-top.png){:width="300px"}
 
 所谓内容区域，可以看成是鼠标选中文字后高亮的背景色区域，上面的例子中，由于父元素设置的是20px，所以图片的vertical-align设置text-top的时候，就可以看成是跟子元素为20px元素的内容区域顶部对齐。
@@ -250,6 +251,10 @@ vertical-align起作用是有前提条件的，这个前提条件就是：只�
 </div>
 
 ```
+
+效果如下：
+
+![relation](/images/posts/css/vertical-align/relation.png){:width="100px"}
 
 从代码上看，好像.box的高度会是32px，但实质上.box的高度会比32px还要高。原因是"strut"继承了line-height: 32px，span也继承了line-height: 32px，但两者的font-size不一样，这就导致了"strut"的font-size比较小，而span的font-size比较大，也就是说它们的基线不在同一位置上，"strut"偏上一点，而span默认又是基线对齐，为此，span总体会往上移以便跟"strut"基线对齐，.box元素就是这样被撑高了。而解决方案可以有以下几种：
 
